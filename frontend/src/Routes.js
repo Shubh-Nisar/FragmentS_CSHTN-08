@@ -1,6 +1,7 @@
 import { createBrowserHistory } from "history";
 import { Router, Switch, Route, BrowserRouter } from "react-router-dom";
 import Home from "./screens/home/Home";
+import Team from "./screens/team/Team";
 
 const Routes = (props) => {
   const history = createBrowserHistory();
@@ -9,6 +10,7 @@ const Routes = (props) => {
     <BrowserRouter history={history}>
       <Switch>        
         <Route path="/home" component={Home} exact />
+        <Route path="/team" component={Team} exact />
       </Switch>
     </BrowserRouter>
   );
