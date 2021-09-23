@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useEffect, useState, useContext } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { BellIcon, MenuIcon, XIcon, SunIcon, MoonIcon } from '@heroicons/react/outline';
+import { BellIcon, MenuIcon, XIcon, SunIcon, MoonIcon, ShoppingCartIcon } from '@heroicons/react/outline';
 import { useHistory } from 'react-router';
 import { GlobalContext } from '../../GlobalContext';
 
@@ -20,10 +20,11 @@ export default function Navbar() {
     }, [curr]);
 
     const navigation = [
-        { name: 'Home', href: '/home', current: curr === '/home' ? true : false },
         { name: 'Courses', href: '/courses', current: curr === '/courses' ? true : false },
+        // { name: 'CodeEditor', href: '/editor', current: curr === '/editor' ? true : false },
         { name: 'Reports', href: '/reports', current: curr === '/reports' ? true : false },
         { name: 'Our Team', href: '/team', current: curr === '/team' ? true : false },
+        // { name: 'Notes', href: '/notes', current: curr === '/notes' ? true : false },
     ]
 
     const { siteTheme } = useContext(GlobalContext);
@@ -46,7 +47,7 @@ export default function Navbar() {
                                 </Disclosure.Button>
                             </div>
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                                <div className="flex-shrink-0 flex items-center">
+                                <div className="flex-shrink-0 flex items-center" onClick={() => history.push('/')}>
                                     <img
                                         className="block lg:hidden h-8 w-auto"
                                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
@@ -81,6 +82,12 @@ export default function Navbar() {
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                            <button
+                                    type="button"
+                                    className="p-1.5 rounded-full text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-0.5 focus:ring-offset-gray-800 focus:ring-white bg-indigo-600 mr-2"
+                                >
+                                    <ShoppingCartIcon className="h-6 w-6 bg-indigo-600"/>    
+                                </button>
                                 <button
                                     type="button"
                                     className="p-1.5 rounded-full text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-0.5 focus:ring-offset-gray-800 focus:ring-white bg-indigo-600"
@@ -108,13 +115,14 @@ export default function Navbar() {
                                 {/* Profile dropdown */}
                                 <Menu as="div" className="ml-3 relative">
                                     <div>
-                                        <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                                        <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white bg-indigo-600 p-2">
                                             <span className="sr-only">Open user menu</span>
                                             <img
-                                                className="h-9 w-9 rounded-full"
+                                                className="h-6 w-6 rounded-full"
                                                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                                 alt=""
                                             />
+                                            <div className="text-gray-50 text-base ml-2 font-bold">Pravin Mehta</div>
                                         </Menu.Button>
                                     </div>
                                     <Transition
