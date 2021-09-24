@@ -21,10 +21,10 @@ export default function Navbar() {
 
     const navigation = [
         { name: 'Courses', href: '/courses', current: curr === '/courses' ? true : false },
-        // { name: 'CodeEditor', href: '/editor', current: curr === '/editor' ? true : false },
+        { name: 'CodeEditor', href: '/editor', current: curr === '/editor' ? true : false },
         { name: 'Reports', href: '/reports', current: curr === '/reports' ? true : false },
         { name: 'Our Team', href: '/team', current: curr === '/team' ? true : false },
-        // { name: 'Notes', href: '/notes', current: curr === '/notes' ? true : false },
+        { name: 'Notes', href: '/notes', current: curr === '/notes' ? true : false },
     ]
 
     const { siteTheme } = useContext(GlobalContext);
