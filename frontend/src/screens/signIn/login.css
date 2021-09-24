@@ -10,11 +10,7 @@
     left:50px;
 } */
 
-#Course-Main-Div {
-    min-height: calc(100vh - 80px);
-  }
-  
-#SignIn-Main-Block {
+#Signin-Main-Block {
   min-height: calc(100vh - 80px);
 }
 
