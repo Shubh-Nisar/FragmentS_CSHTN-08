@@ -10,7 +10,10 @@
     left:50px;
 } */
 
-
+#Course-Main-Div {
+    min-height: calc(100vh - 80px);
+  }
+  
 
 .signImg {
     position: absolute;

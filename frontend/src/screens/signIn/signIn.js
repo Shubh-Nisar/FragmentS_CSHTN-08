@@ -105,7 +105,7 @@ export default function SignInSide() {
 
   const classes = useLoginStyles();
   return (
-    <div class="bg-gray-50">
+    <div class="bg-gray-50" id="Course-Main-Div">
       <div class="mb-40">
         <div class="grid grid-cols-3 gap-4" >
           <div class="col-span-2 mt-30 grid place-content-center">

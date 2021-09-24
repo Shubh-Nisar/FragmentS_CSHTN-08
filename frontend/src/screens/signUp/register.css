@@ -2,7 +2,9 @@
     background-color: rgb(205, 248, 248);
     border:2px solid rgb(238, 210, 210);
 } */
-
+#Course-Main-Div {
+    min-height: calc(100vh - 80px);
+  }
 
 .body1{
     background-color:rgb(250, 255, 255);
