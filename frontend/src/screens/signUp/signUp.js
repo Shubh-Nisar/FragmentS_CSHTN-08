@@ -53,137 +53,139 @@ export default function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     validate(vals, setWarn);
-    
+
     console.log(vals);
   };
 
   return (
     <div className="container-fluid bg-light">
-      <div class="grid grid-cols-3 gap-4" id="Course-Main-Div">
-      <div class="col-span-2 grid place-content-center">
-          <figure class=" mb-20 ">
-            <img src={register} alt="SignIn picture" />
-          </figure>
+      <div id="SignIn-Main-Block">
+        <div class="grid grid-cols-3 gap-4"  >
+          <div class="col-span-2 grid place-content-center">
+            <figure class=" mb-20 ">
+              <img src={register} alt="SignIn picture" style={{height:"75vh"}}/>
+            </figure>
 
-        </div>
-        <div class="mb-20 align-middle" >
-          <Container  >
-            <CssBaseline />
-            <div className={classes.paper}>
-              <Avatar
-                className={classes.avatar}
-                style={{ backgroundColor: "#6366f1", color: "#FFFFFF" }}
-              >
-                <LockOutlinedIcon />
-              </Avatar>
-              <Typography component="h1" variant="h5">
-                Sign up
-              </Typography>
-              <form className={classes.form} onSubmit={handleSubmit}>
-                <Grid container spacing={2}>
-                  <Typography
-                    component="h6"
-                    variant="h6"
-                    className={warn !== "" ? classes.show : classes.hidden}
-                  >
-                    {warn}
-                  </Typography>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      autoComplete="fname"
-                      name="firstName"
-                      // variant="outlined"
-                      required
-                      fullWidth
-                      id="firstName"
-                      label="First Name"
-                      autoFocus
-                      error={err.fname}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      // variant="outlined"
-                      required
-                      fullWidth
-                      id="lastName"
-                      label="Last Name"
-                      name="lastName"
-                      autoComplete="lname"
-                      error={err.lname}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      required
-                      fullWidth
-                      id="email"
-                      label="Email Address"
-                      name="email"
-                      autoComplete="email"
-                      error={err.email}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      required
-                      fullWidth
-                      id="mobileNo"
-                      label="Mobile Number"
-                      name="mobileNo"
-                      autoComplete="mobileNo"
-                      error={err.num}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      required
-                      fullWidth
-                      id="address"
-                      label="Address"
-                      name="address"
-                      autoComplete="address"
-                      error={err.address}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      required
-                      fullWidth
-                      name="password"
-                      label="Password"
-                      type="password"
-                      id="password"
-                      autoComplete="current-password"
-                      error={err.password}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                </Grid>
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
+          </div>
+          <div class="mb-20 align-middle" >
+            <Container  >
+              <CssBaseline />
+              <div className={classes.paper}>
+                <Avatar
+                  className={classes.avatar}
                   style={{ backgroundColor: "#6366f1", color: "#FFFFFF" }}
-                  className={classes.submit}
                 >
-                  Sign Up
-                </Button>
-                <Grid container justify="flex-end">
-                  <Grid item>
-                    <Link to="/login" variant="body2">
-                      Already have an account? Sign in
-                    </Link>
+                  <LockOutlinedIcon />
+                </Avatar>
+                <Typography component="h1" variant="h5">
+                  Sign up
+                </Typography>
+                <form className={classes.form} onSubmit={handleSubmit}>
+                  <Grid container spacing={2}>
+                    <Typography
+                      component="h6"
+                      variant="h6"
+                      className={warn !== "" ? classes.show : classes.hidden}
+                    >
+                      {warn}
+                    </Typography>
+                    <Grid item xs={12} sm={6}>
+                      <TextField
+                        autoComplete="fname"
+                        name="firstName"
+                        // variant="outlined"
+                        required
+                        fullWidth
+                        id="firstName"
+                        label="First Name"
+                        autoFocus
+                        error={err.fname}
+                        onChange={handleChange}
+                      />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <TextField
+                        // variant="outlined"
+                        required
+                        fullWidth
+                        id="lastName"
+                        label="Last Name"
+                        name="lastName"
+                        autoComplete="lname"
+                        error={err.lname}
+                        onChange={handleChange}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        required
+                        fullWidth
+                        id="email"
+                        label="Email Address"
+                        name="email"
+                        autoComplete="email"
+                        error={err.email}
+                        onChange={handleChange}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        required
+                        fullWidth
+                        id="mobileNo"
+                        label="Mobile Number"
+                        name="mobileNo"
+                        autoComplete="mobileNo"
+                        error={err.num}
+                        onChange={handleChange}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        required
+                        fullWidth
+                        id="address"
+                        label="Address"
+                        name="address"
+                        autoComplete="address"
+                        error={err.address}
+                        onChange={handleChange}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        required
+                        fullWidth
+                        name="password"
+                        label="Password"
+                        type="password"
+                        id="password"
+                        autoComplete="current-password"
+                        error={err.password}
+                        onChange={handleChange}
+                      />
+                    </Grid>
                   </Grid>
-                </Grid>
-              </form>
-            </div>
-          </Container>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    style={{ backgroundColor: "#6366f1", color: "#FFFFFF" }}
+                    className={classes.submit}
+                  >
+                    Sign Up
+                  </Button>
+                  <Grid container justify="flex-end">
+                    <Grid item>
+                      <Link to="/login" variant="body2">
+                        Already have an account? Sign in
+                      </Link>
+                    </Grid>
+                  </Grid>
+                </form>
+              </div>
+            </Container>
+          </div>
         </div>
       </div>
     </div>
