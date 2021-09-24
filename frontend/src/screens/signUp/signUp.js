@@ -21,8 +21,7 @@ import "./register.css";
 import register from "../../assets/images/register.png";
 
 
-
-export default function SignUp() {
+export default function SignInSide() {
   const history = useHistory();
   const [isChecked, setChecked] = useState({ value: true, initial: true });
   const [warn, setWarn] = useState("");
@@ -56,19 +55,18 @@ export default function SignUp() {
 
     console.log(vals);
   };
-
+  
   return (
-    <div className="container-fluid bg-light">
-      <div id="SignIn-Main-Block">
-        <div class="grid grid-cols-3 gap-4"  >
-          <div class="col-span-2 grid place-content-center">
-            <figure class=" mb-20 ">
-              <img src={register} alt="SignIn picture" style={{height:"75vh"}}/>
+    <div class="bg-gray-50" id="SignIn-Main-Block">
+      
+        <div class="grid grid-cols-3 gap-4">
+          <div class="col-span-2 mt-30 grid place-content-center">
+            <figure>
+              <img className="signImg w-full" src={register} alt="SignIn picture" />
             </figure>
-
           </div>
-          <div class="mb-20 align-middle" >
-            <Container  >
+          <div class="bg-gray-50 max-w-lg -mt-5">
+          <Container  >
               <CssBaseline />
               <div className={classes.paper}>
                 <Avatar
@@ -188,6 +186,5 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
