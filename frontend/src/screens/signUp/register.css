@@ -1,0 +1,40 @@
+/* body{
+    background-color: rgb(205, 248, 248);
+    border:2px solid rgb(238, 210, 210);
+} */
+
+
+.body1{
+    background-color:rgb(250, 255, 255);
+    display:flex;
+    float:left;
+    position:absolute;
+    left:150px;
+    top:100px;
+}
+
+.regImg {
+    position: absolute;
+    top: 50px;
+    right: -939px;
+    width: 200%;
+}
+
+/* .MuiAvatar-colorDefault {
+    color: #fff;
+    background-color: #6366f1;
+}
+
+.MuiButton-containedPrimary {
+    color: #fff;
+    background-color: #6366f1;
+}
+
+.MuiButton-containedPrimary {
+    color: #fff;
+    background-color: #6366f1;
+} */
+
+.f1{
+    width:100%;
+}

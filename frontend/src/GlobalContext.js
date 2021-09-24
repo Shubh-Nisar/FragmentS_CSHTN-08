@@ -66,7 +66,7 @@ export const GlobalProvider = (props) => {
   return (
     <GlobalContext.Provider
       value={{
-        user: [userData, setUserData],
+        userInfo: [userData, setUserData],
         siteTheme: [theme, setTheme],
         courseSelection: [courseSelect, setCourseSelect],
         courseAll: [allCourses, setAllCourses],
