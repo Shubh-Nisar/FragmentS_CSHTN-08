@@ -23,6 +23,7 @@ app.use('/api/uploads/videos', express.static('uploads/videos'));
 app.use('/api/uploads/thumbnails', express.static('uploads/thumbnails'));
 app.use('/api/uploads/attachments', express.static('uploads/attachments'));
 app.use('/api/uploads/cover', express.static('uploads/cover'));
+app.use('/api/uploads/profile', express.static('uploads/profile'));
 
 // // Routes
 
@@ -32,10 +33,12 @@ app.use('/api/v1/auth/google',require('./routes/authApi'));
 app.use('/api/signIn', require('./routes/signIn'));
 app.use('/api/course', require('./routes/course'));
 
-app.use('/api/upload', require('./routes/upload'));
+app.use('/api/uploadvideo', require('./routes/uploadVideo'));
 app.use('/api/video', require('./routes/video'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/payment',require('./routes/payment'));
 app.use('/api/quiz',require('./routes/quiz'));
+app.use('/api/authapi',require('./routes/authApi'));
+app.use('/api/uploadcourse',require('./routes/uploadCourse'));
 
 module.exports = app;
